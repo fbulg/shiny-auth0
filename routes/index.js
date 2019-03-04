@@ -15,7 +15,7 @@ var authenticateWithPromptNone = passport.authenticate('auth0', {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/reports/mnps-pbb/');
+  res.redirect('/reports/');
 });
 
 router.get('/login',
@@ -26,7 +26,7 @@ router.get('/login',
     return authenticateWithDefaultPrompt(req, res, next);
   },
   function (req, res) {
-    res.redirect('/reports/mnps-pbb/');
+    res.redirect('/reports/');
   });
 
 router.get('/logout', function(req, res){
